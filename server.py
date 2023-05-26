@@ -12,7 +12,7 @@ def index():
     return {"response": "the application in running"}
 
 
-@app.post("/perfume")
+@app.post("/spin")
 async def perfume(item: Item):
 	try:
 		id = item.id

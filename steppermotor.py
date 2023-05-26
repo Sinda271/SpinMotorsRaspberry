@@ -38,7 +38,7 @@ GPIO.output( in4, GPIO.LOW )
  
  
 motor_pins = [in1,in2,in3,in4]
-motor_step_counter = 0 ;
+motor_step_counter = 0
  
  
 def cleanup():
@@ -49,7 +49,6 @@ def cleanup():
     GPIO.cleanup()
  
  
-# the meat
 try:
     i = 0
     for i in range(step_count):
@@ -59,8 +58,8 @@ try:
             motor_step_counter = (motor_step_counter - 1) % 8
         elif direction==False:
             motor_step_counter = (motor_step_counter + 1) % 8
-        else: # defensive programming
-            print( "uh oh... direction should *always* be either True or False" )
+        else: 
+            print( "direction is  either True or False" )
             cleanup()
             exit( 1 )
         time.sleep( step_sleep )

@@ -1,7 +1,6 @@
 import RPi.GPIO as GPIO
 import time
 import numpy as np
-#from servmot import sweep
 
 in1 = 17
 in2 = 18
@@ -84,8 +83,4 @@ def revolver(newpos):
 		f = open("currentPos.txt", "w")
 		f.write(str(newpos))
 		f.close()
-		#sweep(30)
-
-
-#revolver(3)
 
